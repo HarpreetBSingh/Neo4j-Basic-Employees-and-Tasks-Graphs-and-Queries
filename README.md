@@ -206,3 +206,12 @@ CREATE (m1) – [:Leads_Task] -> (t9)
 CREATE (m3) – [:Leads_Task] -> (t9)
 
 ![image](https://user-images.githubusercontent.com/99159437/162148678-bafaf408-a252-42ae-bbce-b5d979928a6d.png)
+
+## Querries 
+### At this point, our graph is complete, however, we need to demonstrate its usefulness by performing some basic querries. 
+#### All employees led by "Caroline Susan"
+MATCH (m:Manager) – [:Leads_Task] –> (t:Task) <- [:Has_Task] – (e:Employee)
+WHERE m.Name = "Caroline Susan"
+RETURN DISTINCT m.Name, e.Name
+![image](https://user-images.githubusercontent.com/99159437/162149331-2c461cdf-1f69-46d8-a8e0-4d9163b6aaa8.png)
+
