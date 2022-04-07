@@ -215,3 +215,31 @@ WHERE m.Name = "Caroline Susan"
 RETURN DISTINCT m.Name, e.Name
 ![image](https://user-images.githubusercontent.com/99159437/162149331-2c461cdf-1f69-46d8-a8e0-4d9163b6aaa8.png)
 
+#### All employees aged over 40
+MATCH (m:Manager) – [:Leads_Task] –> (t:Task) <- [:Has_Task] – (e:Employee)
+WHERE e.Age > "40"
+RETURN distinct e.Name as Employee, e.Age as Employee_Age
+![image](https://user-images.githubusercontent.com/99159437/162150297-6546c41b-013d-474d-92d7-53ba9bede4e2.png)
+
+
+#### All tasks and managers of "Jackie Shaw"
+MATCH (m:Manager) – [:Leads_Task] –> (t:Task) <- [:Has_Task] – (e:Employee)
+WHERE e.Name = "Jackie Shaw"
+RETURN m.Name as Manager, e.Name as Employee, t.Type as Task
+![image](https://user-images.githubusercontent.com/99159437/162150502-cc9b5732-9b66-4d73-bbb0-fbfb9f074200.png)
+MATCH (m:Manager) – [:Leads_Task] –> (t:Task) <- [:Has_Task] – (e:Employee)
+WHERE e.Name = "Jackie Shaw"
+RETURN m as Manager, e as Employee, t as Task
+![image](https://user-images.githubusercontent.com/99159437/162150675-b55d5697-fd5b-4d00-81e9-940689d0d897.png)
+
+#### All employees with a female manager
+MATCH (m:Manager) – [:Leads_Task] –> (t:Task) <- [:Has_Task] – (e:Employee)
+WHERE m.Sex = "F"
+RETURN e.Name as Employee, m.Name as Manager, m.Sex as Manager_Gender
+![image](https://user-images.githubusercontent.com/99159437/162150790-062f61fb-8936-461f-9e7f-95853ca26324.png)
+
+#### All employees with a female manager who work on a task that involves development
+MATCH (m:Manager) – [:Leads_Task] –> (t:Task) <- [:Has_Task] – (e:Employee)
+WHERE m.Sex = "F" and t.Type CONTAINS 'Development'
+RETURN e.Name as Employee, t.Type as Task, m.Name as Manager, m.Sex as Manager_Gender
+![image](https://user-images.githubusercontent.com/99159437/162150899-4c8c32b6-0d27-473b-9b66-82f3e3f0c9f4.png)
