@@ -41,8 +41,8 @@ CREATE (e19: Employee {Name:"Evelyn Cheryl",Age:"27",Sex:"F"})
 
 CREATE (e20: Employee {Name:"Leigh Glass",Age:"46",Sex:"F"})
 
+![image](https://user-images.githubusercontent.com/99159437/162147781-21c76060-eca3-4742-abe3-b28bc0158b69.png)
 
-![image](https://user-images.githubusercontent.com/99159437/162141866-4601fb0b-98fe-4ff6-a04c-2ac53ec48575.png)
 
 ## Generating Task Nodes
 CREATE (t1: Task {Type: "Data Cleaning"})
@@ -63,8 +63,8 @@ CREATE (t8: Task {Type: "Stakeholder Communication"})
 
 CREATE (t9: Task {Type: "Data Processing"})
 
+![image](https://user-images.githubusercontent.com/99159437/162147899-3002fa0e-e5a0-43e0-8991-f7ab85440567.png)
 
-![image](https://user-images.githubusercontent.com/99159437/162142423-0d9a63f7-427f-49ce-b06d-b3f8e3aa3528.png)
 
 ## Generating Manager Nodes
 CREATE (m1: Manager {Name:"Jerry Jones",Age:"57",Sex:"M", Specialty:"Data Analyst"})
@@ -75,7 +75,7 @@ CREATE (m3: Manager {Name:"Cathlyn Lin",Age:"55",Sex:"F",Specialty:"Data Analyst
 
 CREATE (m4: Manager {Name:"Vanessa Teymori",Age:"42",Sex:"F",Specialty:" Business Analyst"})
 
-![image](https://user-images.githubusercontent.com/99159437/162142899-3195fee1-109e-420d-8be4-43837929da41.png)
+![image](https://user-images.githubusercontent.com/99159437/162148008-24748c43-adc8-499b-8501-b43012d35868.png)
 
 ## Generating Relationships
 ### Now we must generate relationships to show the connections between all these nodes. This is assigning tasks to employees and which managers will lead which tasks.
@@ -205,4 +205,4 @@ CREATE (m1) – [:Leads_Task] -> (t9)
 
 CREATE (m3) – [:Leads_Task] -> (t9)
 
-![image](https://user-images.githubusercontent.com/99159437/162146880-98deb0c8-b5bd-4b95-b680-3063f41fddef.png)
+![image](https://user-images.githubusercontent.com/99159437/162148678-bafaf408-a252-42ae-bbce-b5d979928a6d.png)
