@@ -41,3 +41,24 @@ CREATE (e19:Employee {Name:"Evelyn Cheryl",Age:"27",Sex:"F"})
 
 CREATE (e20:Employee {Name:"Leigh Glass",Age:"46",Sex:"F"})
 ![image](https://user-images.githubusercontent.com/99159437/162141866-4601fb0b-98fe-4ff6-a04c-2ac53ec48575.png)
+
+## Generating Task Nodes
+CREATE (t1:Task {Type: "Data Cleaning"})
+
+CREATE (t2:Task {Type: "Data Visualization"})
+
+CREATE (t3:Task {Type: "Model Development"})
+
+CREATE (t4:Task {Type: "Data Collection"})
+
+CREATE (t5:Task {Type: "Generating Reports"})
+
+CREATE (t6:Task {Type: "Maintaining Databases"})
+
+CREATE (t7:Task {Type: "Software Development"})
+
+CREATE (t8:Task {Type: "Stakeholder Communication"})
+
+CREATE (t9:Task {Type: "Data Processing"})
+
+![image](https://user-images.githubusercontent.com/99159437/162142423-0d9a63f7-427f-49ce-b06d-b3f8e3aa3528.png)
