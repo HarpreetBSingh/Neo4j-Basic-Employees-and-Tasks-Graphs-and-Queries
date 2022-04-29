@@ -1,4 +1,4 @@
-# Neo4j-Basic Employees and Tasks Graphs and Querries
+# Neo4j-Basic Employees and Tasks Graphs and Queries
  Using Neo4j, I generated hypothetical data of employees and managers working for a data analyst department for a company. I then generated querries to create relationships and return certain info to show basic knowledge.
 ## Generating Employee Nodes
 CREATE (e1: Employee {Name:"Daniel Mcgee",Age:"35",Sex:"M"})
